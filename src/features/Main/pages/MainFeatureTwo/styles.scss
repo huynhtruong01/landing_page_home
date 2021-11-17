@@ -1,0 +1,42 @@
+.main__feature-two {
+  position: relative;
+  background-color: #063183;
+  border-radius: 0.75rem;
+  margin-top: 3.1875rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 23.125rem;
+
+  .feature-two__content {
+    margin-left: 5rem;
+
+    h1 {
+      color: #fff;
+      margin-bottom: 0.9375rem;
+      line-height: 2.1875rem;
+      font-size: 2.1875rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: #fff;
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-two__btn {
+      padding: 1rem 1.375rem;
+      background-color: #fff;
+      color: #002366;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+
+  .feature-two__image {
+    position: absolute;
+    max-height: 27.46rem;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,10 @@
+@import './assets/sass/reset';
+@import './assets/sass/variables';
+@import './assets/sass/base';
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

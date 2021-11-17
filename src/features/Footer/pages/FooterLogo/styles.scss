@@ -1,0 +1,13 @@
+.footer__logo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.625rem;
+
+  p {
+    display: inline-block;
+    color: #c2c2c2;
+    font-size: 0.875rem;
+  }
+}
