@@ -2,6 +2,7 @@ import React from 'react'
 import facebook from '../../../../assets/icons/facebook.png'
 import twitter from '../../../../assets/icons/twitter.png'
 import linked_in from '../../../../assets/icons/linkedin.png'
+import icon_right from '../../../../assets/icons/icon_right.png'
 import './styles.scss'
 
 FooterList.propTypes = {}
@@ -14,15 +15,27 @@ function FooterList() {
         <ul>
           <li>
             <a href="#">Listing</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Property</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Agents</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Blog</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
         </ul>
       </div>
@@ -31,15 +44,27 @@ function FooterList() {
         <ul>
           <li>
             <a href="#">Our Homes</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Member Stories</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Video</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Free trial</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
         </ul>
       </div>
@@ -48,15 +73,27 @@ function FooterList() {
         <ul>
           <li>
             <a href="#">Patnerships</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Terms of use</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Privacy</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
           <li>
             <a href="#">Sitemap</a>
+            <span>
+              <img src={icon_right} alt="" />
+            </span>
           </li>
         </ul>
       </div>

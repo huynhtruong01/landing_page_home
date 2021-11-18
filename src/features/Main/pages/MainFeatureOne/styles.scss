@@ -24,9 +24,18 @@
       color: #0689ff;
       font-weight: 600;
       font-size: 1.125rem;
+      transition: 0.2s ease-in-out;
 
       .feature-one__icon {
         margin-left: 0.5rem;
+        transition: 0.2s ease-in-out;
+      }
+
+      &:hover {
+        color: #72bafa;
+        .feature-one__icon {
+          transform: translate(0.5rem);
+        }
       }
     }
   }
@@ -41,6 +50,15 @@
       border-radius: 0.75rem;
       overflow: hidden;
       max-width: 21.875rem;
+      transition: 0.2s ease-in-out;
+
+      .feature-one__image {
+        overflow: hidden;
+
+        img {
+          transition: 0.2s ease-in;
+        }
+      }
 
       .feature-one__container {
         padding: 1.25rem;
@@ -77,6 +95,16 @@
               color: #4d4d52;
               font-size: 0.875rem;
             }
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08);
+
+        .feature-one__image {
+          img {
+            transform: scale(1.05);
           }
         }
       }

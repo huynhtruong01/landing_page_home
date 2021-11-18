@@ -1,13 +1,23 @@
 .header__home {
-  padding-top: 2.375rem;
+  //padding-top: 2.375rem;
   background-color: #e6f0ff;
 
   // header nav
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2.5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 2.375rem 0 2rem;
+    width: 100%;
+    z-index: 100;
+    border-radius: 0 0 0.75rem 0.75rem;
+    transition: 0.2s ease-in-out;
+
+    .nav__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     &__logo {
       margin-right: 4.029375rem;
@@ -30,12 +40,24 @@
 
     &__btn {
       font-size: 0.875rem;
-    }
+      transition: 0.2s ease-in-out;
 
-    &__btn--sign-in {
-      background-color: transparent;
-      color: #0f1b4c;
+      &--sign-in {
+        background-color: transparent;
+        color: #0f1b4c;
+      }
+
+      &--register:hover {
+        opacity: 0.75;
+      }
     }
+  }
+
+  // nav active
+  .nav__active {
+    background-color: #e6f0ff;
+    padding: 1.5rem 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
   }
 
   // header body
@@ -43,7 +65,7 @@
     display: flex;
     align-items: center;
     margin-right: -5.5rem;
-    margin-top: 2.4375rem;
+    padding-top: 10rem;
 
     .header__content {
       width: 34.9375rem;

@@ -1,13 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import './styles.scss'
-import logo from '../../../../assets/images/logo2.png'
-import star from '../../../../assets/icons/star.png'
 import amazon from '../../../../assets/icons/amazon.png'
-import slack from '../../../../assets/icons/slack.png'
-import meundies from '../../../../assets/icons/meundies.png'
 import commerce from '../../../../assets/icons/commerce.png'
+import meundies from '../../../../assets/icons/meundies.png'
 import sitepoint from '../../../../assets/icons/sitepoint.png'
+import slack from '../../../../assets/icons/slack.png'
+import star from '../../../../assets/icons/star.png'
+import logo from '../../../../assets/images/logo2.png'
+import './styles.scss'
 
 HeaderClient.propTypes = {}
 

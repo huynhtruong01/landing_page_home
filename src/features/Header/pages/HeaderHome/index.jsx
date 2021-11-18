@@ -10,8 +10,8 @@ HeaderHome.propTypes = {}
 function HeaderHome(props) {
   return (
     <div className="header__home">
+      <HeaderNav logo={logo} />
       <div className="container">
-        <HeaderNav logo={logo} />
         <HeaderBody homeImage={homeImage} />
       </div>
     </div>

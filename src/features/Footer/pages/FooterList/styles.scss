@@ -1,9 +1,10 @@
 .footer__list {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
 
   .footer__item:not(:last-child) {
-    margin-right: 11.5625rem;
+    // margin-right: 11.5625rem;
   }
 
   .footer__item {
@@ -21,16 +22,32 @@
       }
 
       li {
+        transition: 0.2s ease-out;
+
         a {
+          display: inline-block;
           font-size: 1rem;
           color: #7a7a7e;
         }
+
+        span {
+          margin-left: 0.75rem;
+          opacity: 0;
+          transition: 0.2s ease-out;
+        }
+
+        &:hover {
+          a {
+            color: #000;
+          }
+
+          span {
+            opacity: 1;
+            transform: rotate(-180deg);
+          }
+        }
       }
     }
-  }
-
-  .footer__item:nth-child(1) {
-    max-width: 4.4375rem;
   }
 
   .footer__item:nth-child(2) {
@@ -39,6 +56,10 @@
 
   .footer__item:nth-child(3) {
     min-width: 7.6375rem;
+  }
+
+  .footer__item:nth-child(4) {
+    max-width: 15rem;
   }
 
   .footer__item {
@@ -59,6 +80,11 @@
         padding: 0.5rem;
         border-radius: 0.45rem;
         background: #f9f9f9;
+        transition: 0.2s ease-in;
+
+        &:hover {
+          transform: translateY(-0.35rem);
+        }
       }
     }
   }

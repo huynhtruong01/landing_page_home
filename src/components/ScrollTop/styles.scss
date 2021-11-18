@@ -1,0 +1,23 @@
+.scroll_top {
+  position: fixed;
+  right: -5rem;
+  bottom: 3rem;
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+
+  button {
+    padding: 0.75rem;
+    background: #7398f6;
+    border-radius: 0.65rem;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background: #063183;
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+  right: 1.75rem;
+}

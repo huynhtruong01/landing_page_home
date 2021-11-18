@@ -59,9 +59,18 @@
         color: #0689ff;
         font-weight: 600;
         font-size: 0.875rem;
+        transition: 0.2s ease-in-out;
 
         &--icon {
           margin-left: 0.5rem;
+          transition: 0.2s ease-in-out;
+        }
+
+        &:hover {
+          color: #6db4f1;
+          .procedure__link--icon {
+            transform: translateX(0.5rem);
+          }
         }
       }
     }
