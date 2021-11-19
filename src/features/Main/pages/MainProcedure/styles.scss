@@ -1,7 +1,14 @@
+@import '../../../../assets/sass/responsive';
+
 .main__procedure {
   padding: 4.9375rem 0;
   margin-top: 2.5rem;
   text-align: center;
+
+  @include md {
+    margin-top: 1.5rem;
+    padding: 3rem 0;
+  }
 
   .procedure__content {
     display: flex;
@@ -22,10 +29,22 @@
       color: #000339;
       font-weight: 600;
       margin-bottom: 1.25rem;
+
+      @include md {
+        font-size: 1.85rem;
+      }
+
+      @include sm {
+        margin-bottom: 0.85rem;
+      }
     }
 
     .procedure__desc {
       color: #5a6473;
+
+      @include md {
+        font-size: 0.87rem;
+      }
     }
   }
 
@@ -35,14 +54,52 @@
     align-items: center;
     justify-content: center;
 
+    @include md {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include sm {
+      margin-top: 3.25rem;
+      justify-content: center;
+    }
+
     .procedure__item:not(:last-child) {
       margin-right: 8.75rem;
+
+      @include md {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
     }
 
     .procedure__item {
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
+      border-radius: 0.75rem;
+      transition: .3s ease-in-out;
+
+      @include md {
+        width: calc((100% / 2) - 10%);
+        padding: 1.5rem;
+        box-shadow: 0 0 5px #e6f0ff;
+        margin-right: 0;
+      }
+
+      @include smx {
+        width: 100%;
+      }
+
+      @include sm {
+        width: 100%;
+      }
+
+      &:hover{
+        @include md{
+          box-shadow: 0 0 7px 3px #e6f0ff;
+        }
+      }
 
       .procedure__icon {
         margin-bottom: 1.625rem;

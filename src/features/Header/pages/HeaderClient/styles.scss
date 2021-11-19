@@ -1,3 +1,6 @@
+@import '../../../../assets/sass/responsive';
+// @import "sass:math";
+
 .header__client {
   margin-top: 4.9375rem;
   padding: 2.6875rem 0 2.5625rem;
@@ -7,11 +10,23 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 4.375rem;
+
+    @include sm {
+      flex-flow: column wrap;
+    }
   }
 
   &--title {
     .header-logo {
       margin-bottom: 1.4375rem;
+
+      @include sm {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include sm {
+      margin-bottom: 1.75rem;
     }
   }
 
@@ -19,6 +34,20 @@
     text-align: right;
     .header__star {
       margin-bottom: 0.884375rem;
+
+      span {
+        @include lg {
+          width: 1.15rem;
+        }
+      }
+
+      @include sm {
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    @include sm {
+      text-align: left;
     }
   }
 
@@ -26,9 +55,49 @@
     display: flex;
     justify-content: space-between;
 
+    @include md {
+      flex-flow: row wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @include smx {
+      justify-content: space-between;
+    }
+
     .header__logo--item {
+      flex: 0 0 1;
       cursor: pointer;
       transition: 0.2s ease-in-out;
+
+      @include lg {
+        width: calc((100% / 5) - 3.75%);
+      }
+
+      @include md {
+        width: calc((100% / 3) - 8%);
+        margin-bottom: 2.25rem;
+        margin-right: 2rem;
+      }
+
+      @include smx {
+        width: calc((100% / 2) - 5%);
+        margin-right: 0;
+      }
+
+      @include sm {
+        width: 100%;
+        margin-bottom: 1.75rem;
+        margin-right: 0;
+        justify-self: center;
+      }
+
+      a {
+        @include sm {
+          display: flex;
+          justify-content: center;
+        }
+      }
 
       &:hover {
         transform: translateY(-0.75rem);
@@ -39,5 +108,9 @@
   p {
     color: #7d8589;
     font-size: 1rem;
+
+    @include lg {
+      font-size: 0.85rem;
+    }
   }
 }

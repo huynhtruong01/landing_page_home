@@ -1,22 +1,52 @@
+@import '../../../../assets/sass/responsive';
+
 .main__feature-one {
   background-color: #f5fafe;
   padding: 6.875em 0;
+
+  @include md {
+    padding: 4.5rem 0;
+  }
 
   .feature-one__content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 
+    @include md {
+      flex-flow: column;
+      align-items: flex-start;
+    }
+
     .feature-one__title {
+      @include md {
+        margin-bottom: 1.75rem;
+      }
+
       h1 {
         font-size: 35px;
         font-weight: 600;
         margin-bottom: 0.9375rem;
         color: #000339;
+        line-height: 40px;
+
+        @include lg {
+          font-size: 2rem;
+        }
+
+        @include md {
+          font-size: 1.85rem;
+          margin-bottom: 0.85rem;
+          line-height: 2rem;
+        }
       }
 
       p {
         color: #5a6473;
+
+        @include md {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -25,6 +55,10 @@
       font-weight: 600;
       font-size: 1.125rem;
       transition: 0.2s ease-in-out;
+
+      @include lg {
+        font-size: 1rem;
+      }
 
       .feature-one__icon {
         margin-left: 0.5rem;
@@ -45,12 +79,37 @@
     display: flex;
     justify-content: space-between;
 
+    @include md {
+      flex-wrap: wrap;
+    }
+
     .feature-one__item {
       background-color: #ffffff;
       border-radius: 0.75rem;
       overflow: hidden;
       max-width: 21.875rem;
       transition: 0.2s ease-in-out;
+
+      @include xl {
+        width: calc((100% / 3) - 2%);
+      }
+
+      @include lg {
+        width: calc((100% / 3) - 1%);
+      }
+
+      @include md {
+        width: calc((100% / 2) - 2%);
+        margin-bottom: 1.5rem;
+      }
+
+      @include smx {
+        width: 100%;
+      }
+
+      @include sm {
+        width: 100%;
+      }
 
       .feature-one__image {
         overflow: hidden;
@@ -70,11 +129,19 @@
             font-size: 1.25rem;
             margin-bottom: 0.625rem;
             color: #000339;
+
+            @include lg {
+              font-size: 1.13rem;
+            }
           }
 
           p {
             color: #a3a6ab;
             font-size: 0.875rem;
+
+            @include lg {
+              font-size: 0.75rem;
+            }
           }
         }
 
@@ -89,11 +156,19 @@
             img {
               display: inline-block;
               margin-right: 0.625rem;
+
+              @include lg {
+                width: 1.15rem;
+              }
             }
 
             span {
               color: #4d4d52;
               font-size: 0.875rem;
+
+              @include lg {
+                display: none;
+              }
             }
           }
         }

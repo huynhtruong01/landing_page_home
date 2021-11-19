@@ -1,0 +1,41 @@
+// ipad ngang
+@mixin xl {
+  @media screen and (max-width: 64rem) {
+    @content;
+  }
+}
+
+// ipad dọc
+@mixin lg {
+  @media screen and (max-width: 48rem) {
+    @content;
+  }
+}
+
+// tablet nhỏ
+@mixin md {
+  @media screen and (max-width: 30rem) {
+    @content;
+  }
+}
+
+// iphone x
+@mixin smx {
+  @media screen and (max-width: 23.45rem) {
+    @content;
+  }
+}
+
+// smart phone sm
+@mixin sm {
+  @media screen and (max-width: 20rem) {
+    @content;
+  }
+}
+
+// smart phone xs
+@mixin xs {
+  @media screen and (max-width: 15rem) {
+    @content;
+  }
+}

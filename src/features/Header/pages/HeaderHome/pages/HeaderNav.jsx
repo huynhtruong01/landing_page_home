@@ -4,6 +4,7 @@ HeaderNav.propTypes = {}
 
 function HeaderNav({ logo }) {
   const [active, setActive] = useState(false)
+  const [show, setShow] = useState(false)
 
   const scrollActive = () => {
     const scrollTop = document.documentElement.scrollTop
@@ -14,12 +15,32 @@ function HeaderNav({ logo }) {
     }
   }
 
+  // show menu
+  const showMenu = () => {
+    setShow(true)
+  }
+
+  // close menu
+  const closeMenu = () => {
+    setShow(false)
+  }
+
   window.addEventListener('scroll', scrollActive)
 
   return (
     <nav className={active ? 'nav nav__active' : 'nav'}>
       <div className="container nav__flex">
-        <div className="nav__left">
+        <div className="nav__menu" onClick={showMenu}>
+          <box-icon
+            name="menu-alt-left"
+            size="md"
+            className="nav__menu"
+          ></box-icon>
+        </div>
+        <div className={show ? 'nav__left nav__show--menu' : 'nav__left'}>
+          <div className="nav__close" onClick={closeMenu}>
+            <box-icon name="x" type="solid" color="#fff" size="28px"></box-icon>
+          </div>
           <div className="nav__logo">
             <img src={logo} alt="" />
           </div>

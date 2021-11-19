@@ -1,17 +1,32 @@
+@import '../../../../assets/sass/responsive';
+
 .footer__list {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  .footer__item:not(:last-child) {
-    // margin-right: 11.5625rem;
+  @include md {
+    flex-wrap: wrap;
   }
 
   .footer__item {
+    @include md {
+      width: calc(100% / 2);
+      margin-bottom: 2.5rem;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
     h3 {
       margin-bottom: 2.625rem;
       font-size: 1.25rem;
       font-weight: 600;
+
+      @include md {
+        margin-bottom: 1.5rem;
+      }
     }
 
     ul {
@@ -28,6 +43,10 @@
           display: inline-block;
           font-size: 1rem;
           color: #7a7a7e;
+
+          @include sm {
+            font-size: 0.9rem;
+          }
         }
 
         span {
