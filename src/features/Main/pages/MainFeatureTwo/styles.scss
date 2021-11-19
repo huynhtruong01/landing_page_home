@@ -115,6 +115,10 @@
       transform: translateX(6rem);
     }
 
+    @include smx {
+      transform: translateX(8rem);
+    }
+
     @include sm {
       transform: translateX(10rem);
     }
