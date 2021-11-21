@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion'
 import React, { useState } from 'react'
+import { navItem } from '../../../../../animation/Animation'
 
 HeaderNav.propTypes = {}
 
@@ -45,21 +47,46 @@ function HeaderNav({ logo }) {
             <img src={logo} alt="" />
           </div>
           <ul className="nav__list">
-            <li className="nav__item">
+            <motion.li
+              className="nav__item"
+              initial={navItem.from}
+              animate={navItem.to}
+              transition={{ type: 'tween', delay: 0.15 * 1, duration: 0.3 }}
+            >
               <a href="#">Home</a>
-            </li>
-            <li className="nav__item">
+            </motion.li>
+            <motion.li
+              className="nav__item"
+              initial={navItem.from}
+              animate={navItem.to}
+              transition={{ type: 'tween', delay: 0.15 * 2, duration: 0.3 }}
+            >
               <a href="#">Fractures</a>
-            </li>
-            <li className="nav__item">
+            </motion.li>
+            <motion.li
+              className="nav__item"
+              initial={navItem.from}
+              animate={navItem.to}
+              transition={{ type: 'tween', delay: 0.15 * 3, duration: 0.3 }}
+            >
               <a href="#">Service</a>
-            </li>
-            <li className="nav__item">
+            </motion.li>
+            <motion.li
+              className="nav__item"
+              initial={navItem.from}
+              animate={navItem.to}
+              transition={{ type: 'tween', delay: 0.15 * 4, duration: 0.3 }}
+            >
               <a href="#">Listed</a>
-            </li>
-            <li className="nav__item">
+            </motion.li>
+            <motion.li
+              className="nav__item"
+              initial={navItem.from}
+              animate={navItem.to}
+              transition={{ type: 'tween', delay: 0.15 * 5, duration: 0.3 }}
+            >
               <a href="#">Contact</a>
-            </li>
+            </motion.li>
           </ul>
         </div>
         <div className="nav__right">

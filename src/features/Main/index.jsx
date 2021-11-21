@@ -3,10 +3,11 @@ import MainDescription from './pages/MainDescription'
 import MainFeatureOne from './pages/MainFeatureOne'
 import MainProcedure from './pages/MainProcedure'
 import MainFeatureTwo from './pages/MainFeatureTwo'
+import useScroll from '../../hook/useScroll'
 
 MainFeature.propTypes = {}
 
-function MainFeature(props) {
+function MainFeature() {
   return (
     <main className="main">
       <MainProcedure />

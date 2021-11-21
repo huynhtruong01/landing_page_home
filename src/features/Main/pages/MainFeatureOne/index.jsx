@@ -1,18 +1,23 @@
+import { motion } from 'framer-motion'
 import React from 'react'
+import { cardFeatureOne } from '../../../../animation/Animation'
+import icon1 from '../../../../assets/icons/feature_1.png'
+import icon2 from '../../../../assets/icons/feature_2.png'
+import icon3 from '../../../../assets/icons/feature_3.png'
 import icon_right from '../../../../assets/icons/icon_right.png'
 import image1 from '../../../../assets/images/image_1.png'
 import image2 from '../../../../assets/images/image_2.png'
 import image3 from '../../../../assets/images/image_3.png'
-import icon1 from '../../../../assets/icons/feature_1.png'
-import icon2 from '../../../../assets/icons/feature_2.png'
-import icon3 from '../../../../assets/icons/feature_3.png'
+import useScroll from '../../../../hook/useScroll'
 import './styles.scss'
 
 MainFeatureOne.propTypes = {}
 
 function MainFeatureOne() {
+  const [element, controls] = useScroll()
+
   return (
-    <div className="main__feature-one">
+    <div className="main__feature-one" ref={element}>
       <div className="container">
         <div className="feature-one__content">
           <div className="feature-one__title">
@@ -29,7 +34,12 @@ function MainFeatureOne() {
 
         {/* Feature One List */}
         <div className="feature-one__list">
-          <div className="feature-one__item">
+          <motion.div
+            className="feature-one__item"
+            variants={cardFeatureOne}
+            animate={controls}
+            transition={{ type: 'tween', delay: 0.15 * 1 }}
+          >
             <div className="feature-one__image">
               <img src={image1} alt="" />
             </div>
@@ -53,9 +63,14 @@ function MainFeatureOne() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="feature-one__item">
+          <motion.div
+            className="feature-one__item"
+            variants={cardFeatureOne}
+            animate={controls}
+            transition={{ type: 'tween', delay: 0.15 * 2 }}
+          >
             <div className="feature-one__image">
               <img src={image3} alt="" />
             </div>
@@ -79,9 +94,14 @@ function MainFeatureOne() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="feature-one__item">
+          <motion.div
+            className="feature-one__item"
+            variants={cardFeatureOne}
+            animate={controls}
+            transition={{ type: 'tween', delay: 0.15 * 3 }}
+          >
             <div className="feature-one__image">
               <img src={image2} alt="" />
             </div>
@@ -105,7 +125,7 @@ function MainFeatureOne() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

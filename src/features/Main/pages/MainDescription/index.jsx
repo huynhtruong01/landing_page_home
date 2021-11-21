@@ -1,19 +1,47 @@
-import React from 'react'
-import img1 from '../../../../assets/images/image_4.png'
+import { motion } from 'framer-motion'
+import React, { useState } from 'react'
+import { headerImage, imageDescription } from '../../../../animation/Animation'
 import img2 from '../../../../assets/icons/vector_grow.png'
+import img1 from '../../../../assets/images/image_4.png'
 import user from '../../../../assets/images/users.png'
+import useScroll from '../../../../hook/useScroll'
+import Counter from './pages/Counter'
 import './styles.scss'
 
 MainDescription.propTypes = {}
 
 function MainDescription() {
+  const [element, controls] = useScroll()
+  const [isCounter, setIsCounter] = useState(false)
+
+  const scrollNumber = () => {
+    const scrollY = window.scrollY
+    if (scrollY > 2790) {
+      setIsCounter(true)
+    }
+    console.log(scrollY)
+  }
+
+  window.addEventListener('scroll', scrollNumber)
+
   return (
-    <div className="main__description">
+    <div className="main__description" ref={element}>
       <div className="container">
         <div className="description__body">
           <div className="description__image">
-            <img src={img1} alt="" />
-            <div className="description__detail">
+            <motion.img
+              src={img1}
+              alt=""
+              variants={imageDescription}
+              animate={controls}
+              transition={{ type: 'tween', duration: 0.3 }}
+            />
+            <motion.div
+              className="description__detail"
+              variants={imageDescription}
+              animate={controls}
+              transition={{ type: 'tween', delay: 0.2, duration: 0.3 }}
+            >
               <div className="description__detail--content">
                 <h2 className="description__number">
                   +40,000
@@ -28,9 +56,14 @@ function MainDescription() {
               <div className="description__user">
                 <img src={user} alt="" />
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div className="description__content">
+          <motion.div
+            className="description__content"
+            variants={headerImage}
+            animate={controls}
+            transition={{ type: 'tween', duration: 0.3 }}
+          >
             <div className="description__line"></div>
             <h1 className="description__title">
               You’ve found a neighborhood you love.
@@ -40,24 +73,27 @@ function MainDescription() {
               for a while. In a recent Trulia survey, we found that five out of
               six respondents said finding the right neighborhood{' '}
             </p>
-          </div>
+          </motion.div>
         </div>
         <div className="description__info--list">
           <div className="description__info-item">
             <h1>
-              2,500<span>+</span>
+              {!isCounter ? 0 : <Counter from={0} to={2500} />}
+              <span>+</span>
             </h1>
             <p>Homes For Sale</p>
           </div>
           <div className="description__info-item">
             <h1>
-              5,000<span>+</span>
+              {!isCounter ? 0 : <Counter from={0} to={5000} />}
+              <span>+</span>
             </h1>
             <p>Homes Recently Sold</p>
           </div>
           <div className="description__info-item">
             <h1>
-              170<span>+</span>
+              {!isCounter ? 0 : <Counter from={0} to={170} />}
+              <span>+</span>
             </h1>
             <p>Price Reduced</p>
           </div>

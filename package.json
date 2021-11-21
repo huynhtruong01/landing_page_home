@@ -7,10 +7,11 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "boxicons": "^2.0.9",
-    "framer-motion": "^5.3.0",
+    "framer-motion": "^4.1.17",
     "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-intersection-observer": "^8.32.3",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
